@@ -6,36 +6,16 @@ Definition of Situation
 
 Parameters of Situation
 The following table lists the activities performed by each of the objects relevant to the situation described in the assignment as well as the time to perform each task.
-Object
-Travel time
-(minutes)
-Loading time (minutes)
-Unloading Time
-(minutes)
-Treatment Time
-Shovel 1
-20.0 ± 5.0
-10.0 ± 5.0
----
----
-Shovel 2
-40.0 ± 10.0
-10.0 ± 5.0
----
----
-Treatment Plant 1
-Dependent
----
-Negligible
-60.0 ± 10.0
-Treatment Plant 2
-Dependent
----
-Negligible
-60.0 ± 10.0
+
+Object||Travel time (minutes)||Loading time (minutes)||Unloading Time (minutes)||Treatment Time
+
+Shovel 1||20.0 ± 5.0||10.0 ± 5.0|| -—- ||---
+Shovel 2||40.0 ± 10.0||10.0 ± 5.0 || —— ||---
+Treatment Plant 1||Dependent||—-||Negligible||60.0 ± 10.0
+Treatment Plant 2||Dependent|| ——- || Negligible || 60.0 ± 10.0
 
 Task 1 and 2: Construction of Simulations
-	Prior to starting coding the diagram below was created to model the situation. As illustrated in the diagram, the trucks follow an almost circular loop. They begin and end at the treatment facility, going to their designated shovels and returning to drop off their load. It was assumed that there would be a queue at each shovel that would operate in a first-in-first-out manner. Once returning to the treatment facility, the trucks would be assigned to drop of their load at one of the two plants. 
+	Prior to starting coding the diagram included was created to model the situation. As illustrated in the diagram, the trucks follow an almost circular loop. They begin and end at the treatment facility, going to their designated shovels and returning to drop off their load. It was assumed that there would be a queue at each shovel that would operate in a first-in-first-out manner. Once returning to the treatment facility, the trucks would be assigned to drop of their load at one of the two plants. 
 Two possible methods of assignment were implemented and tested to determine which would be more efficient. The first method is based on what the previous truck as assigned. To expand, if the previous truck was assigned to treatment plant 1 then the next would be assigned to treatment plant 2. This is similar to is the previous truck was assigned to plant 2, however the next truck would be assigned plant 1. It was designed this was to ensure both plants are receiving loads so both would be able to begin the treatment process as fast as possible. The second method implemented involves assigning every 5 arriving trucks to one plant then the next 5 truck to the other plant over and over again. For example, the first 5 trucks would be assigned plant 1, the next 5 would be assigned plant 2 and the following 5 would be assigned plant 1. Like the previous method, this one is a cycle. Once the treatment plants began the treatment process, a queue of trucks would form. The queue would be once again a FIFO queue so that once the plant is done treating the loads the first truck in line would be able to drop off their load.
 
 
